@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Météo à {{ city }}</title>
+</head>
+<body>
+    <h1>Prévisions météo pour {{ city }}</h1>
+
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Température (°C)</th>
+            <th>Description</th>
+        </tr>
+        {% for forecast in forecasts %}
+        <tr>
+            <td>{{ forecast.date }}</td>
+            <td>{{ forecast.temperature }}</td>
+            <td>{{ forecast.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
