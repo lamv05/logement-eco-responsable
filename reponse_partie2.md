@@ -72,4 +72,26 @@ curl -X 'POST' \
 
 ### Question 2 
 
-De ligne 172 à 201
+De ligne 172 à 201, on définit un URL renvoyant une réponse HTML, cette fonction va récuperer les différent types de facture puis les afficher sur un Template html dans le fichier fastapi/template/chart.html utilisant l'API de google chart pour afficher les données récupéré sur un graphique circulaire.
+
+Voici la commande curl pour acceder au graphique
+
+```
+curl -X 'GET' \
+  'http://localhost:8000/chart?id=0' \
+  -H 'accept: text/html'
+```
+
+On peut également entrer en paramètre un id correspondant à l'ID du logement
+
+### Question 3
+
+De ligne 203 à 234, on définit un URI effectuant une requête auprès de l'API d'open weather définit ligne 12 et 13. On affiche ensuite les information avec une réponse html comme la question précedente.
+
+### Question 4
+
+Réponse dans fichier esp_dht.ino configurant un esp32 de façon à ce qu'il effectue des requête HTTP POST des mesures effectué par le capteur http.
+De plus, la LED de l'esp s'allume ou s'eteint en fonction de la température mesuré dans la BDD en effectuant des requête gest au chemin /last-mesure
+
+
+
