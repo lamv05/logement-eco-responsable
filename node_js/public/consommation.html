@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consommation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/consommation.js" defer></script>
+</head>
+
+<body>
+    <div class="p-5 bg-success text-white text-center">
+        <h1>Logement éco responsable</h1>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="consommation.html">Consommation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="etat.html">Capteurs/Actionneurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="economie.html">Économie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config.html">Configuration</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Liste déroulante pour choisir le type de facture -->
+    <div class="container mt-5">
+        <label for="factureSelect" class="form-label">Choisir un type de facture :</label>
+        <select id="factureSelect" class="form-select" onchange="fetchConsommation(this.value)">
+            <option value="electricite">Électricité (kWh)</option>
+            <option value="eau">Eau (m³)</option>
+            <option value="gaz">Gaz</option>
+            <option value="dechets">dechet</option>
+        </select>
+    </div>
+
+    <!-- Canvas pour afficher le graphique -->
+    <div class="container mt-5">
+        <canvas id="consommationChart"></canvas>
+    </div>
+</body>
+
+</html>

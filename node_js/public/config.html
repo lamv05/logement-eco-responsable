@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Acceuil</title> 
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <script src="js/bootstrap.bundle.min.js"></script> 
+</head> 
+<body> 
+
+
+
+<div class="p-5 bg-success text-white text-center">
+  <h1>Logement éco responsable</h1>
+</div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Acceuil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="consommation.html">Consommation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="etat.html">Capteurs/Actionneurs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="economie.html">Économie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="config.html">Configuration</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2 class="text-center">Configuration des Capteurs et Actionneurs</h2>
+
+    <h4>Ajouter un Capteur/Actionneur</h4>
+    <form id="addDeviceForm">
+      <div class="mb-3">
+        <label for="reference" class="form-label">Référence Commerciale</label>
+        <input type="text" id="reference" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="piece" class="form-label">Pièce</label>
+        <input type="number" id="piece" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="type" class="form-label">Type de Device</label>
+        <input type="number" id="type" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="port" class="form-label">Port Communication</label>
+        <input type="number" id="port" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+
+    <h4 class="mt-5">Liste des Capteurs/Actionneurs</h4>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Référence</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="deviceTable">
+        <!-- Données insérées dynamiquement -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/config.js"></script>
+</body>
+</html>
