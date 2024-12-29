@@ -84,9 +84,13 @@ curl -X 'GET' \
 
 On peut également entrer en paramètre un id correspondant à l'ID du logement
 
+J'ai utilisé chatgpt pour adapter à notre cas le ficher fastapi/template/charts.html fourni pour utiliser l'API de Google charts  
+
 ### Question 3
 
 De ligne 203 à 234, on définit un URI effectuant une requête auprès de l'API d'open weather définit ligne 12 et 13. On affiche ensuite les information avec une réponse html comme la question précedente.
+
+Je me suis servi de chatgpt pour écrire la fonction python de la ligne 203 à 234 et le fichier fastapi/template/meteo.html
 
 ### Question 4
 
